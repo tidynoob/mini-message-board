@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  form(action='/new' method='post')
+    p(class='test')
+      label(for='user') User:
+      input(type='text' name='user' id='user' value=user) 
+    p
+      label(for='message') Text:
+      input(type='text' name='message' id='message' value=message)
+    p
+      input(type='submit' value='Submit')
+  a(href="/")
+    button Back to messages
